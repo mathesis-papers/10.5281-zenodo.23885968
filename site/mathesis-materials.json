@@ -1,0 +1,14 @@
+{
+  "schema": "mathesis.materials.v1",
+  "work": "oeis-a391810-alternating-jacobsthal",
+  "version": 4,
+  "repository_url": "https://github.com/mathesis-papers/6aec384f18e9d5f3e99cfcd1",
+  "site_url": "https://papers.trureturing.org/6aec384f18e9d5f3e99cfcd1/",
+  "doi": "10.5281/zenodo.23885969",
+  "reading": {
+    "en": "https://papers.trureturing.org/6aec384f18e9d5f3e99cfcd1/en/",
+    "zh": "https://papers.trureturing.org/6aec384f18e9d5f3e99cfcd1/zh/"
+  },
+  "slides": [],
+  "visualizations": []
+}

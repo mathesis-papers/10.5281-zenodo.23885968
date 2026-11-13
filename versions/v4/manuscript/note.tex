@@ -1,0 +1,450 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+pdftitle={OEIS A391810: formula (5), COMMENTS (C.1)-(C.10), and prime-index vanishing},
+pdfauthor={Haobo Ma; Wenlin Zhang}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\round}{\operatorname{round}}
+\title{OEIS A391810: formula (5),\\
+COMMENTS (C.1)--(C.10), and prime-index vanishing}
+\author{Haobo Ma\\
+\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\
+\small National University of Singapore\\
+\small ChronoAI Pte Ltd, Singapore}
+\date{2 November 2026}
+\begin{document}
+\maketitle
+\begin{center}\small
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+\end{center}
+\begin{abstract}
+We prove formula (5), COMMENTS (C.1)--(C.10), and the zero clause of
+COMMENT (C.11) of Paul D. Hanna's OEIS entry A391810,
+revision 39~\cite{hanna}.
+For each positive integer $n$, let $T(n,k)$ be the coefficient of $x^{-k}$
+in the formal bilateral Laurent series
+$\sum_{j\in\Z}x^j(1-x^j)^{n+j}$ at zero.
+We prove that the negative alternating sum of the complete row is
+$2\round(2^n/3)=2J_n$, where $J_n$ is the offset-zero Jacobsthal sequence.
+The proof identifies every nonpositive Laurent coefficient with a coefficient
+of a finite polynomial, proves the stated row bound, and evaluates that
+polynomial at $-1$. No substitution into the bilateral series is required.
+The same polynomial proves the conjectured row sums, first and second
+moments, and alternating first-moment generating function in formulas
+(2), (3), (4), and (6) of that entry. A divisor-sum expression gives
+the individual terms and shows that $T(n,q)=0$ for every prime $q>n$.
+The further assertion in (C.11) that the next prime is the first zero
+remains open here.
+\end{abstract}
+
+\section{The identity and its conventions}
+
+Formula (5) and COMMENTS (C.1)--(C.11) of Paul D. Hanna's OEIS entry A391810
+pose alternating-sum and individual-term conjectures~\cite{hanna}.
+The negative
+alternating sum of the full signed Laurent row equals twice a Jacobsthal
+number. We establish this identity and the ten individual-term formulas,
+together with prime-index vanishing, using the original row
+interpretation and inclusive endpoint. The Jacobsthal closed form and
+nearest-integer description are already recorded in A001045~\cite{jacobsthal};
+the issue here is their connection to the bilateral Laurent coefficients.
+The pinned formal source~\cite{formal} supplies the same connection and
+the whole formula. This note gives a self-contained written proof.
+
+For $n\geq1$, work in the formal Laurent field $\Q((x))$ and put
+\begin{equation}\label{eq:series}
+ S_n(x)=\sum_{j\in\Z}x^j(1-x^j)^{n+j},\qquad
+ T(n,k)=[x^{-k}]S_n(x),\quad k\geq0.
+\end{equation}
+Integer powers with negative exponents mean inverses in this field.
+The $j=0$ term is zero, since $n>0$.
+We justify the coefficientwise sum below; it is not an analytic convergence
+assertion. Write
+\[
+ B_n=\left\lfloor\frac{n+1}{2}\right\rfloor^2,
+ \qquad J_0=0,\quad J_1=1,\quad J_{n+2}=J_{n+1}+2J_n.
+\]
+For rational arguments, $\round$ denotes nearest-integer rounding, with ties
+toward positive infinity. The arguments used here are never ties.
+
+\begin{theorem}\label{thm:main}
+For every integer $n\geq1$, all $T(n,k)$ are integers, $T(n,k)=0$ for
+$k>B_n$, and
+\begin{equation}\label{eq:main}
+ -\sum_{k=0}^{B_n}(-1)^k T(n,k)
+ =2\round\!\left(\frac{2^n}{3}\right)=2J_n.
+\end{equation}
+\end{theorem}
+
+\section{From the bilateral series to a finite row}
+
+\begin{lemma}\label{lem:row}
+For every $n\geq1$ and $k\geq0$,
+\begin{equation}\label{eq:bridge}
+ T(n,k)=[y^k]P_n(y),\qquad
+ P_n(y)=-1+\sum_{h=1}^{n}y^h(1-y^h)^{n-h}\in\Z[y].
+\end{equation}
+Moreover, $\deg P_n\leq B_n$.
+\end{lemma}
+
+\begin{proof}
+First consider the formal sum in~\eqref{eq:series}. For $j>0$, its $j$th
+summand has least exponent $j$. For $j=-h<0$, the identity
+$1-x^{-h}=-x^{-h}(1-x^h)$ gives
+\begin{equation}\label{eq:normal}
+ x^{-h}(1-x^{-h})^{n-h}
+ =(-1)^{n-h}x^{h(h-n-1)}(1-x^h)^{n-h}.
+\end{equation}
+The last factor has constant coefficient one and only nonnegative
+exponents, also when $n-h<0$. Thus the least exponent is $h(h-n-1)$.
+These least exponents tend to positive infinity as $h\to\infty$;
+the positive-index least exponents do likewise. They are uniformly
+bounded below, and only finitely many summands can contribute to any fixed
+coefficient. This proves that the bilateral coefficientwise sum is a
+well-defined element of $\Q((x))$.
+
+No $j>0$ term contributes to a nonpositive power of $x$. For $1\leq h\leq n$,
+the $j=-h$ term is the finite polynomial
+$y^h(1-y^h)^{n-h}$ in $y=x^{-1}$.
+At the boundary $h=n+1$, it is
+\[
+ x^{-(n+1)}(1-x^{-(n+1)})^{-1}
+ =-\frac{1}{1-x^{n+1}}
+ =-\sum_{r\geq0}x^{(n+1)r}.
+\]
+Its nonpositive part is exactly the constant $-1$.
+For $h\geq n+2$, the least exponent $h(h-n-1)$ is positive.
+This proves~\eqref{eq:bridge}, including the constant coefficient.
+
+It remains to check the sharper row bound. The $h$th summand of $P_n+1$
+has degree $h(n+1-h)$. If $n=2m+1$, this is at most $(m+1)^2=B_n$,
+as follows by completing the square.
+If $n=2m$, split off its highest monomial
+\[
+ (-1)^{2m-h}y^{h(2m+1-h)},\qquad 1\leq h\leq2m.
+\]
+Pairing $h$ with $2m+1-h$ cancels these monomials: their exponents
+coincide and their signs are opposite. There is no fixed index in this
+pairing. Every remaining monomial in the $h$th summand has exponent
+$h(r+1)$ with $0\leq r\leq2m-h-1$, hence at most
+$h(2m-h)\leq m^2=B_n$. When that range is empty, there is no remaining
+monomial. The constant term also respects the bound. This proves the lemma.
+\end{proof}
+
+\section{Polynomial evaluation and Jacobsthal numbers}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+By Lemma~\ref{lem:row}, the full sum in~\eqref{eq:main} is $-P_n(-1)$.
+We evaluate the finite polynomial, not $S_n$.
+An odd index $h$ contributes $-2^{n-h}$ to $P_n(-1)$.
+An even index $h<n$ contributes zero; if $h=n$ is even, its contribution
+is one, since its exponent $n-h$ is zero.
+For $n=2m+1$ with $m\geq0$, the odd indices give
+\[
+ P_{2m+1}(-1)=-1-\sum_{r=0}^{m}4^r
+ =-\frac{4^{m+1}+2}{3}
+ =-\frac{2(2^{2m+1}+1)}{3}.
+\]
+For $n=2m$ with $m\geq1$, the even boundary term cancels the constant
+$-1$, so
+\[
+ P_{2m}(-1)=-2\sum_{r=0}^{m-1}4^r
+ =-\frac{2(4^m-1)}{3}.
+\]
+\par\nopagebreak
+Together these yield
+\begin{equation}\label{eq:value}
+ -P_n(-1)=\frac{2\bigl(2^n-(-1)^n\bigr)}{3}.
+\end{equation}
+
+To identify the right-hand side, put $C_n=(2^n-(-1)^n)/3$.
+Then $C_0=0$, $C_1=1$, and a direct calculation gives
+\[
+ C_{n+1}+2C_n
+ =\frac{2^{n+2}-\bigl((-1)^{n+1}+2(-1)^n\bigr)}{3}
+ =\frac{2^{n+2}-(-1)^{n+2}}{3}=C_{n+2}.
+\]
+Induction in the defining recurrence therefore gives $C_n=J_n$ for all
+$n\geq0$. In particular,
+\[
+ \frac{2^n}{3}-J_n=\frac{(-1)^n}{3}.
+\]
+The absolute error is $1/3<1/2$, so the unique nearest integer to $2^n/3$
+is $J_n$. Combining this with~\eqref{eq:value} proves both equalities.
+Integrality and the vanishing assertion follow from Lemma~\ref{lem:row}.
+\end{proof}
+
+The first six alternating sums are $2,2,6,10,22,42$.
+The positive-index restriction matters: the finite expression gives
+$P_0(y)=-1$, so its negative value at $-1$ is $1$, whereas $2J_0=0$.
+No zero-index row extension is asserted.
+
+\section{Individual terms and prime-index zeros}
+
+We use $\binom{a}{b}=0$ when $a\geq0$ and $b$ is outside $0\leq b\leq a$.
+
+\begin{corollary}[Divisor formula]\label{cor:divisors}
+For $n\geq1$, $T(n,0)=-1$, and for every $k\geq1$,
+\begin{equation}\label{eq:divisors}
+ T(n,k)=\sum_{\substack{h\mid k\\1\leq h\leq n}}
+ (-1)^{k/h-1}\binom{n-h}{k/h-1}.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+In the $h$th summand of $P_n+1$, the binomial expansion is
+\[
+ y^h(1-y^h)^{n-h}
+ =\sum_{r=0}^{n-h}(-1)^r\binom{n-h}{r}y^{h(r+1)}.
+\]
+Its $y^k$ coefficient is zero unless $h\mid k$; otherwise put
+$r=k/h-1$. All these summands have positive degree, so the constant
+coefficient of $P_n$ is $-1$.
+\end{proof}
+
+\begin{corollary}[COMMENTS (C.1)--(C.5)]\label{cor:small}
+The first five individual-term conjectures hold in their stated ranges:
+\begin{align*}
+ T(n,0)&=-1 &&(n\geq1),&
+ T(n,1)&=1 &&(n\geq1),\\
+ T(n,2)&=-(n-2) &&(n\geq2),&
+ T(n,3)&=\frac{n(n-3)}2+2 &&(n\geq3),\\
+ T(n,4)&=-\frac{(n-3)(n^2-3n+8)}6 &&(n\geq4).
+\end{align*}
+\end{corollary}
+
+\begin{proof}
+The constant term is given above. For $k=1,2,3,4$, respectively,
+formula~\eqref{eq:divisors} gives
+\[
+ 1,\qquad -\binom{n-1}{1}+1,\qquad
+ \binom{n-1}{2}+1,\qquad
+ -\binom{n-1}{3}-\binom{n-2}{1}+1.
+\]
+The divisors involved are $\{1\}$, $\{1,2\}$, $\{1,3\}$, and
+$\{1,2,4\}$. Expanding the displayed binomials gives the stated formulas.
+\end{proof}
+
+\begin{corollary}[COMMENTS (C.6)--(C.9)]\label{cor:edges}
+For $m\geq1$,
+\[
+ T(2m-1,m^2)=(-1)^{m-1},\qquad
+ T(2m,m^2)=(-1)^{m-1}m.
+\]
+For $m\geq2$,
+\[
+ T(2m-1,m^2-1)=2(-1)^m,\qquad
+ T(2m,m^2-1)=2m(-1)^m.
+\]
+\end{corollary}
+
+\begin{proof}
+For the odd row, the $h$th summand has degree
+$h(2m-h)=m^2-(h-m)^2$. Only $h=m$ reaches $m^2$;
+its highest coefficient is $(-1)^{m-1}$. To reach $m^2-1$, only
+$h=m-1,m,m+1$ are possible. The middle index contributes nothing,
+because $m$ does not divide $m^2-1$ when $m\geq2$.
+The other two contribute their highest coefficients, both $(-1)^m$.
+
+For the even row, first remove the highest monomial of each summand.
+Their total is zero by the pairing used in Lemma~\ref{lem:row}.
+The remaining $h$th polynomial has degree at most
+$h(2m-h)=m^2-(h-m)^2$; when nonempty, its highest coefficient is
+\[
+ (-1)^{2m-h-1}\binom{2m-h}{2m-h-1}
+ =(-1)^{2m-h-1}(2m-h).
+\]
+Thus $h=m$ alone contributes to $m^2$, with coefficient
+$(-1)^{m-1}m$. For $m^2-1$ and $m\geq2$, only $h=m-1,m+1$
+contribute, since the same divisibility argument excludes $h=m$.
+Their contributions are $(-1)^m(m+1)$ and $(-1)^m(m-1)$.
+\end{proof}
+
+\begin{corollary}[COMMENT (C.10) and the zero clause of (C.11)]\label{cor:primes}
+For every odd prime $p$, $T(p,p)=2$. For every $n\geq1$ and prime
+$q>n$, $T(n,q)=0$. In particular, the next prime after $n$ has zero
+coefficient, as asserted for $n\geq5$ in (C.11).
+\end{corollary}
+
+\begin{proof}
+For $T(p,p)$ the divisors in~\eqref{eq:divisors} are $1,p$.
+Since $p$ is odd their contributions are
+\[
+ (-1)^{p-1}\binom{p-1}{p-1}=1
+ \qquad\text{and}\qquad \binom00=1.
+\]
+If $q>n$, only the divisor $1$ is allowed, and
+$\binom{n-1}{q-1}=0$.
+\end{proof}
+
+The stronger assertion in (C.11) is that $T(n,k)\ne0$ for every
+$0\leq k<q$, where $q$ is the next prime after $n\geq5$.
+That first-zero assertion is not established by the divisor formula;
+it remains an open question in this note. Exact checks of rows $5\leq n\leq79$
+agree with it.
+
+\section{The sibling conjectures}
+
+All sums below retain the complete inclusive endpoint $B_n$.
+Let $D=y\,d/dy$ denote the Euler differential operator.
+
+\begin{corollary}\label{cor:moments}
+Formulas (2) and (3) of A391810 hold for every $n\geq1$:
+\[
+ \sum_{k=0}^{B_n}T(n,k)=0,\qquad
+ \sum_{k=0}^{B_n}kT(n,k)=1.
+\]
+Formula (4) holds for every $n\geq2$:
+\[
+ \sum_{k=0}^{B_n}k^2T(n,k)=5-2n.
+\]
+\end{corollary}
+
+\begin{proof}
+At $y=1$, only the $h=n$ summand of $P_n+1$ survives, giving
+$P_n(1)=0$. In $P_n'(1)$, the terms $h=n,n-1$ give
+$n-(n-1)=1$; for $n=1$, use $P_1(y)=-1+y$ directly.
+For $D^2P_n(1)$, only $n-h=0,1,2$ survive. Applying $D^2y^a=a^2y^a$
+to $y^h$, $y^h-y^{2h}$ and $y^h-2y^{2h}+y^{3h}$ gives
+\[
+ (D^2P_n)(1)=n^2-3(n-1)^2+2(n-2)^2=5-2n.
+\]
+When $n=2$, the absent $h=0$ term has the displayed weight zero.
+Lemma~\ref{lem:row} identifies these three evaluations with the stated sums.
+\end{proof}
+
+\begin{corollary}\label{cor:alternating-moment}
+Formula (6) of A391810 holds. Namely, for
+\[
+ A_n=-\sum_{k=0}^{B_n}(-1)^k kT(n,k)=P_n'(-1),\qquad n\geq1,
+\]
+the formal ordinary generating function is
+\begin{equation}\label{eq:moment-gf}
+ \sum_{n\geq1}A_nz^n
+ =\frac{z(1-z+8z^2)}{(1+z)^2(1-2z)^2}.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Write $n=h+r$ and $f_{h,r}(y)=y^h(1-y^h)^r$.
+For odd $h$, direct differentiation gives
+$f_{h,r}'(-1)=h(2^r+r2^{r-1})$, with the second term zero when $r=0$.
+For even $h$, the derivatives for $r=0,1$ are $-h,h$, and all others vanish.
+Consequently,
+\[
+ \sum_{r\geq0}z^{h+r}f_{h,r}'(-1)=
+ \begin{cases}
+ hz^h(1-z)/(1-2z)^2,&h\text{ odd},\\
+ hz^h(z-1),&h\text{ even}.
+ \end{cases}
+\]
+Each coefficient involves finitely many $h$, so rearrangement in $\Q[[z]]$
+is valid. Differentiating the geometric series gives
+\[
+ \sum_{h\text{ odd}}hz^h=\frac{z(1+z^2)}{(1-z^2)^2},\qquad
+ \sum_{h\text{ even}}hz^h=\frac{2z^2}{(1-z^2)^2}.
+\]
+These identities yield
+\[
+ \sum_{n\geq1}A_nz^n
+ =\frac{1-z}{(1-z^2)^2}
+   \left(\frac{z(1+z^2)}{(1-2z)^2}-2z^2\right)
+ =\frac{z(1-z+8z^2)}{(1+z)^2(1-2z)^2}.
+\]
+\end{proof}
+
+The first eight $A_n$ are $1,1,13,25,81,181,453,1025$, as in the source.
+Formula (1) defines the row. Formula (7), which is not labeled a conjecture
+there, is the defining squared-norm relation for the companion entry
+A391811~\cite{norm}. Its half-sum of squares is an integer:
+$T(n,k)^2\equiv T(n,k)\pmod2$ and the row sum is zero.
+It is positive, since $T(n,0)=-1$ and $T(n,1)=1$.
+The row-sum COMMENT in A391811 is also Corollary~\ref{cor:moments}.
+
+\paragraph{Coverage of the posing entry.}
+The source locators in the following table refer to revision 39 of A391810.
+\begin{center}\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.36\linewidth}>{\raggedright\arraybackslash}p{0.55\linewidth}}
+\hline
+Source item & Mathematical coverage\\ \hline
+Formula (1); row endpoint & Definition; Lemma~\ref{lem:row}\\
+Formulas (2), (3), (4) & Corollary~\ref{cor:moments}\\
+Formula (5) & Theorem~\ref{thm:main}\\
+Formula (6) & Corollary~\ref{cor:alternating-moment}\\
+COMMENTS (C.1)--(C.5) & Corollary~\ref{cor:small}\\
+COMMENTS (C.6)--(C.9) & Corollary~\ref{cor:edges}\\
+COMMENT (C.10) & Corollary~\ref{cor:primes}\\
+(C.11), next-prime coefficient zero & Corollary~\ref{cor:primes}, for every prime $q>n$\\
+(C.11), first-zero location & Open here; finite checks for $5\leq n\leq79$\\
+``Each row sum appears to equal zero'' & Same statement as formula (2)\\
+Formula (7); A391811 & Defining relation; positive integrality as above\\
+Two related bilateral identities in COMMENTS & Outside the nonpositive-coefficient results here\\ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Source and verification scope.}
+The result is stated as
+\href{https://github.com/the-omega-institute/trureturing/blob/1239bd2a0ed6e9d54aabb5a42af94234e9eb61ae/D5/S3/ArithSums/HannaLaurentAlternatingJacobsthal.lean#L103}{\texttt{full\_formula\_five}} in the pinned
+module in~\cite{formal}. Its five clauses retain the integer
+row sum, the rounding--Jacobsthal equality, the rational original-Laurent sum,
+the coefficient bridge for every $k\geq0$, and vanishing beyond $B_n$.
+The companion
+\href{https://github.com/the-omega-institute/trureturing/blob/1239bd2a0ed6e9d54aabb5a42af94234e9eb61ae/D5/S3/ArithSums/HannaLaurentRowSums.lean}{\texttt{HannaLaurentRowSums.lean}}
+contains \texttt{series\_coefficient}, \texttt{row\_degree}, and
+\texttt{result}: the coefficient bridge, support bound, and formula (2).
+The declarations \texttt{result} in
+\href{https://github.com/the-omega-institute/trureturing/blob/1239bd2a0ed6e9d54aabb5a42af94234e9eb61ae/D5/S3/ArithSums/HannaLaurentFirstMoment.lean}{\texttt{HannaLaurentFirstMoment.lean}}
+and
+\href{https://github.com/the-omega-institute/trureturing/blob/1239bd2a0ed6e9d54aabb5a42af94234e9eb61ae/D5/S3/ArithSums/HannaLaurentSecondMoment.lean}{\texttt{HannaLaurentSecondMoment.lean}}
+state formulas (3) and (4). All four modules have the revision specified
+in~\cite{formal}. The divisor formula, COMMENTS (C.1)--(C.10),
+prime-index vanishing, and formula (6) have the written proofs above.
+
+The companion script \texttt{verify.py}, with results in
+\texttt{verification.json}, compares the divisor formula and an independent
+Laurent expansion with the polynomial on full rows $1\leq n\leq79$,
+checks the term formulas through row 79, and checks all four moment identities.
+The Jacobsthal scalar identity is checked through $n=512$.
+These are finite exact-arithmetic checks supplementing the written proofs.
+
+\begin{thebibliography}{9}
+\raggedright
+\bibitem{hanna}
+P. D. Hanna, \emph{Entry A391810}, The On-Line Encyclopedia of Integer Sequences,
+revision 39, 3 February 2026; author line 21 December 2025.
+Definition, row endpoint, formulas (2)--(6), and COMMENTS (C.1)--(C.11).
+\url{https://oeis.org/A391810}.
+
+\bibitem{jacobsthal}
+The OEIS Foundation Inc., \emph{A001045: Jacobsthal sequence},
+The On-Line Encyclopedia of Integer Sequences,
+revision 1350, 30 June 2026.
+Name, offset, recurrence, and closed-form/rounding formulas.
+\url{https://oeis.org/A001045}.
+
+\bibitem{norm}
+P. D. Hanna, \emph{Entry A391811}, The On-Line Encyclopedia of Integer Sequences,
+revision 11, 28 December 2025; author line 21 December 2025.
+Definition and formula for the half-sum of squared A391810 row entries;
+row-sum COMMENT.
+\url{https://oeis.org/A391811}.
+
+\bibitem{formal}
+Trureturing contributors,
+\emph{Formal sources for A391810}, directory \texttt{D5/S3/ArithSums}, revision
+\nolinkurl{1239bd2a0ed6e9d54aabb5a42af94234e9eb61ae}.
+\href{https://github.com/the-omega-institute/trureturing/blob/1239bd2a0ed6e9d54aabb5a42af94234e9eb61ae/D5/S3/ArithSums/HannaLaurentAlternatingJacobsthal.lean}{\texttt{HannaLaurentAlternatingJacobsthal.lean}}, theorem
+\texttt{full\_formula\_five}; companion modules linked above.
+\end{thebibliography}
+\end{document}

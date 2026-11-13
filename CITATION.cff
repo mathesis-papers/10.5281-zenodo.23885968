@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this work, cite it."
+title: "OEIS A391810: formula (5), COMMENTS (C.1)--(C.10), and prime-index vanishing"
+authors:
+  - name: "Haobo Ma"
+  - name: "Wenlin Zhang"
+date-released: "2026-11-05"
+version: "4"
+url: "https://mathesis-omega-research.apps.chrono-ai.fun/papers/oeis-a391810-alternating-jacobsthal?version=4"
+doi: "10.5281/zenodo.23885969"
+license: "CC-BY-4.0"

@@ -1,0 +1,1267 @@
+{
+  "status": "passed",
+  "arithmetic": "Python integers and fractions.Fraction; no floating point",
+  "full_rows": [
+    1,
+    79
+  ],
+  "coefficient_comparisons": 43154,
+  "divisor_formula_comparisons": 43154,
+  "coefficient_scope": "k=0 through B_n+5, with literal summands normalized independently of finite_polynomial",
+  "outer_index_scope": "j=-(2n+7) through 7; the written valuation proof excludes every omitted contributor for tested nonpositive exponents",
+  "scalar_rows": [
+    1,
+    512
+  ],
+  "primary_sequence_terms_matched": 94,
+  "companion_A391811_terms_matched": 28,
+  "positive_integral_half_squared_norm_rows": [
+    1,
+    79
+  ],
+  "sibling_formulas_checked": {
+    "formula_2": {
+      "rows": [
+        1,
+        79
+      ],
+      "expected": "row sum = 0"
+    },
+    "formula_3": {
+      "rows": [
+        1,
+        79
+      ],
+      "expected": "first moment = 1"
+    },
+    "formula_4": {
+      "rows": [
+        2,
+        79
+      ],
+      "expected": "second moment = 5-2n",
+      "excluded_n1_value": 1
+    },
+    "formula_6": {
+      "rows": [
+        1,
+        79
+      ],
+      "expected": "coefficients of z(1-z+8z^2)/((1+z)^2(1-2z)^2)",
+      "independent_method": "direct convolution of (1+z)^(-2) and (1-2z)^(-2), not the derivative parity proof"
+    }
+  },
+  "boundary_tests": [
+    "n=1",
+    "n=2 even boundary cancellation",
+    "n=0 finite-polynomial non-extension",
+    "exact half-integer rounding convention"
+  ],
+  "first_six": [
+    2,
+    2,
+    6,
+    10,
+    22,
+    42
+  ],
+  "rows": [
+    {
+      "n": 1,
+      "bound": 1,
+      "degree": 1,
+      "alternating_sum": 2,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": 1,
+      "alternating_first_moment": 1
+    },
+    {
+      "n": 2,
+      "bound": 1,
+      "degree": 1,
+      "alternating_sum": 2,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": 1,
+      "alternating_first_moment": 1
+    },
+    {
+      "n": 3,
+      "bound": 4,
+      "degree": 4,
+      "alternating_sum": 6,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -1,
+      "alternating_first_moment": 13
+    },
+    {
+      "n": 4,
+      "bound": 4,
+      "degree": 4,
+      "alternating_sum": 10,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -3,
+      "alternating_first_moment": 25
+    },
+    {
+      "n": 5,
+      "bound": 9,
+      "degree": 9,
+      "alternating_sum": 22,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -5,
+      "alternating_first_moment": 81
+    },
+    {
+      "n": 6,
+      "bound": 9,
+      "degree": 9,
+      "alternating_sum": 42,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -7,
+      "alternating_first_moment": 181
+    },
+    {
+      "n": 7,
+      "bound": 16,
+      "degree": 16,
+      "alternating_sum": 86,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -9,
+      "alternating_first_moment": 453
+    },
+    {
+      "n": 8,
+      "bound": 16,
+      "degree": 16,
+      "alternating_sum": 170,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -11,
+      "alternating_first_moment": 1025
+    },
+    {
+      "n": 9,
+      "bound": 25,
+      "degree": 25,
+      "alternating_sum": 342,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -13,
+      "alternating_first_moment": 2361
+    },
+    {
+      "n": 10,
+      "bound": 25,
+      "degree": 25,
+      "alternating_sum": 682,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -15,
+      "alternating_first_moment": 5261
+    },
+    {
+      "n": 11,
+      "bound": 36,
+      "degree": 36,
+      "alternating_sum": 1366,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -17,
+      "alternating_first_moment": 11693
+    },
+    {
+      "n": 12,
+      "bound": 36,
+      "degree": 36,
+      "alternating_sum": 2730,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -19,
+      "alternating_first_moment": 25625
+    },
+    {
+      "n": 13,
+      "bound": 49,
+      "degree": 49,
+      "alternating_sum": 5462,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -21,
+      "alternating_first_moment": 55841
+    },
+    {
+      "n": 14,
+      "bound": 49,
+      "degree": 49,
+      "alternating_sum": 10922,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -23,
+      "alternating_first_moment": 120741
+    },
+    {
+      "n": 15,
+      "bound": 64,
+      "degree": 64,
+      "alternating_sum": 21846,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -25,
+      "alternating_first_moment": 259733
+    },
+    {
+      "n": 16,
+      "bound": 64,
+      "degree": 64,
+      "alternating_sum": 43690,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -27,
+      "alternating_first_moment": 555825
+    },
+    {
+      "n": 17,
+      "bound": 81,
+      "degree": 81,
+      "alternating_sum": 87382,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -29,
+      "alternating_first_moment": 1184521
+    },
+    {
+      "n": 18,
+      "bound": 81,
+      "degree": 81,
+      "alternating_sum": 174762,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -31,
+      "alternating_first_moment": 2514621
+    },
+    {
+      "n": 19,
+      "bound": 100,
+      "degree": 100,
+      "alternating_sum": 349526,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -33,
+      "alternating_first_moment": 5320573
+    },
+    {
+      "n": 20,
+      "bound": 100,
+      "degree": 100,
+      "alternating_sum": 699050,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -35,
+      "alternating_first_moment": 11223625
+    },
+    {
+      "n": 21,
+      "bound": 121,
+      "degree": 121,
+      "alternating_sum": 1398102,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -37,
+      "alternating_first_moment": 23612401
+    },
+    {
+      "n": 22,
+      "bound": 121,
+      "degree": 121,
+      "alternating_sum": 2796202,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -39,
+      "alternating_first_moment": 49554901
+    },
+    {
+      "n": 23,
+      "bound": 144,
+      "degree": 144,
+      "alternating_sum": 5592406,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -41,
+      "alternating_first_moment": 103770213
+    },
+    {
+      "n": 24,
+      "bound": 144,
+      "degree": 144,
+      "alternating_sum": 11184810,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -43,
+      "alternating_first_moment": 216861025
+    },
+    {
+      "n": 25,
+      "bound": 169,
+      "degree": 169,
+      "alternating_sum": 22369622,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -45,
+      "alternating_first_moment": 452363481
+    },
+    {
+      "n": 26,
+      "bound": 169,
+      "degree": 169,
+      "alternating_sum": 44739242,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -47,
+      "alternating_first_moment": 942009581
+    },
+    {
+      "n": 27,
+      "bound": 196,
+      "degree": 196,
+      "alternating_sum": 89478486,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -49,
+      "alternating_first_moment": 1958584653
+    },
+    {
+      "n": 28,
+      "bound": 196,
+      "degree": 196,
+      "alternating_sum": 178956970,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -51,
+      "alternating_first_moment": 4066300025
+    },
+    {
+      "n": 29,
+      "bound": 225,
+      "degree": 225,
+      "alternating_sum": 357913942,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -53,
+      "alternating_first_moment": 8430861761
+    },
+    {
+      "n": 30,
+      "bound": 225,
+      "degree": 225,
+      "alternating_sum": 715827882,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -55,
+      "alternating_first_moment": 17458246661
+    },
+    {
+      "n": 31,
+      "bound": 256,
+      "degree": 256,
+      "alternating_sum": 1431655766,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -57,
+      "alternating_first_moment": 36109539893
+    },
+    {
+      "n": 32,
+      "bound": 256,
+      "degree": 256,
+      "alternating_sum": 2863311530,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -59,
+      "alternating_first_moment": 74605172625
+    },
+    {
+      "n": 33,
+      "bound": 289,
+      "degree": 289,
+      "alternating_sum": 5726623062,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -61,
+      "alternating_first_moment": 153982531241
+    },
+    {
+      "n": 34,
+      "bound": 289,
+      "degree": 289,
+      "alternating_sum": 11453246122,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -63,
+      "alternating_first_moment": 317509434141
+    },
+    {
+      "n": 35,
+      "bound": 324,
+      "degree": 324,
+      "alternating_sum": 22906492246,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -65,
+      "alternating_first_moment": 654107611933
+    },
+    {
+      "n": 36,
+      "bound": 324,
+      "degree": 324,
+      "alternating_sum": 45812984490,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -67,
+      "alternating_first_moment": 1346392710825
+    },
+    {
+      "n": 37,
+      "bound": 361,
+      "degree": 361,
+      "alternating_sum": 91625968982,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -69,
+      "alternating_first_moment": 2769140395921
+    },
+    {
+      "n": 38,
+      "bound": 361,
+      "degree": 361,
+      "alternating_sum": 183251937962,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -71,
+      "alternating_first_moment": 5690990740021
+    },
+    {
+      "n": 39,
+      "bound": 400,
+      "degree": 400,
+      "alternating_sum": 366503875926,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -73,
+      "alternating_first_moment": 11687401376773
+    },
+    {
+      "n": 40,
+      "bound": 400,
+      "degree": 400,
+      "alternating_sum": 733007751850,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -75,
+      "alternating_first_moment": 23985642546625
+    },
+    {
+      "n": 41,
+      "bound": 441,
+      "degree": 441,
+      "alternating_sum": 1466015503702,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -77,
+      "alternating_first_moment": 49192964679801
+    },
+    {
+      "n": 42,
+      "bound": 441,
+      "degree": 441,
+      "alternating_sum": 2932031007402,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -79,
+      "alternating_first_moment": 100829288532301
+    },
+    {
+      "n": 43,
+      "bound": 484,
+      "degree": 484,
+      "alternating_sum": 5864062014806,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -81,
+      "alternating_first_moment": 206545295410413
+    },
+    {
+      "n": 44,
+      "bound": 484,
+      "degree": 484,
+      "alternating_sum": 11728124029610,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -83,
+      "alternating_first_moment": 422864027512025
+    },
+    {
+      "n": 45,
+      "bound": 529,
+      "degree": 529,
+      "alternating_sum": 23456248059222,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -85,
+      "alternating_first_moment": 865274928406881
+    },
+    {
+      "n": 46,
+      "bound": 529,
+      "degree": 529,
+      "alternating_sum": 46912496118442,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -87,
+      "alternating_first_moment": 1769643603578981
+    },
+    {
+      "n": 47,
+      "bound": 576,
+      "degree": 576,
+      "alternating_sum": 93824992236886,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -89,
+      "alternating_first_moment": 3617474700688853
+    },
+    {
+      "n": 48,
+      "bound": 576,
+      "degree": 576,
+      "alternating_sum": 187649984473770,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -91,
+      "alternating_first_moment": 7391324388439025
+    },
+    {
+      "n": 49,
+      "bound": 625,
+      "degree": 625,
+      "alternating_sum": 375299968947542,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -93,
+      "alternating_first_moment": 15095398751001161
+    },
+    {
+      "n": 50,
+      "bound": 625,
+      "degree": 625,
+      "alternating_sum": 750599937895082,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -95,
+      "alternating_first_moment": 30816297450248061
+    },
+    {
+      "n": 51,
+      "bound": 676,
+      "degree": 676,
+      "alternating_sum": 1501199875790166,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -97,
+      "alternating_first_moment": 62883594796988093
+    },
+    {
+      "n": 52,
+      "bound": 676,
+      "degree": 676,
+      "alternating_sum": 3002399751580330,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -99,
+      "alternating_first_moment": 128269189386959625
+    },
+    {
+      "n": 53,
+      "bound": 729,
+      "degree": 729,
+      "alternating_sum": 6004799503160662,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -101,
+      "alternating_first_moment": 261542378359886641
+    },
+    {
+      "n": 54,
+      "bound": 729,
+      "degree": 729,
+      "alternating_sum": 12009599006321322,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -103,
+      "alternating_first_moment": 533092755891707541
+    },
+    {
+      "n": 55,
+      "bound": 784,
+      "degree": 784,
+      "alternating_sum": 24019198012642646,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -105,
+      "alternating_first_moment": 1086201510127284133
+    },
+    {
+      "n": 56,
+      "bound": 784,
+      "degree": 784,
+      "alternating_sum": 48038396025285290,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -107,
+      "alternating_first_moment": 2212435016942305825
+    },
+    {
+      "n": 57,
+      "bound": 841,
+      "degree": 841,
+      "alternating_sum": 96076792050570582,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -109,
+      "alternating_first_moment": 4504934027260087321
+    },
+    {
+      "n": 58,
+      "bound": 841,
+      "degree": 841,
+      "alternating_sum": 192153584101141162,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -111,
+      "alternating_first_moment": 9169996041271125421
+    },
+    {
+      "n": 59,
+      "bound": 900,
+      "degree": 900,
+      "alternating_sum": 384307168202282326,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -113,
+      "alternating_first_moment": 18660248056044152973
+    },
+    {
+      "n": 60,
+      "bound": 900,
+      "degree": 900,
+      "alternating_sum": 768614336404564650,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -115,
+      "alternating_first_moment": 37961008059092109625
+    },
+    {
+      "n": 61,
+      "bound": 961,
+      "degree": 961,
+      "alternating_sum": 1537228672809129302,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -117,
+      "alternating_first_moment": 77203040012191827201
+    },
+    {
+      "n": 62,
+      "bound": 961,
+      "degree": 961,
+      "alternating_sum": 3074457345618258602,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -119,
+      "alternating_first_moment": 156968127812398869701
+    },
+    {
+      "n": 63,
+      "bound": 1024,
+      "degree": 1024,
+      "alternating_sum": 6148914691236517206,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -121,
+      "alternating_first_moment": 319060351200828170613
+    },
+    {
+      "n": 64,
+      "bound": 1024,
+      "degree": 1024,
+      "alternating_sum": 12297829382473034410,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -123,
+      "alternating_first_moment": 648368893553717203025
+    },
+    {
+      "n": 65,
+      "bound": 1089,
+      "degree": 1089,
+      "alternating_sum": 24595658764946068822,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -125,
+      "alternating_first_moment": 1317234169411556130281
+    },
+    {
+      "n": 66,
+      "bound": 1089,
+      "degree": 1089,
+      "alternating_sum": 49191317529892137642,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -127,
+      "alternating_first_moment": 2675461103431355708381
+    },
+    {
+      "n": 67,
+      "bound": 1156,
+      "degree": 1156,
+      "alternating_sum": 98382635059784275286,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -129,
+      "alternating_first_moment": 5432907736079198313053
+    },
+    {
+      "n": 68,
+      "bound": 1156,
+      "degree": 1156,
+      "alternating_sum": 196765270119568550570,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -131,
+      "alternating_first_moment": 11029786530591370418025
+    },
+    {
+      "n": 69,
+      "bound": 1225,
+      "degree": 1225,
+      "alternating_sum": 393530540239137101142,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -133,
+      "alternating_first_moment": 22387515178048688420561
+    },
+    {
+      "n": 70,
+      "bound": 1225,
+      "degree": 1225,
+      "alternating_sum": 787061080478274202282,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -135,
+      "alternating_first_moment": 45430914589829272009461
+    },
+    {
+      "n": 71,
+      "bound": 1296,
+      "degree": 1296,
+      "alternating_sum": 1574122160956548404566,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -137,
+      "alternating_first_moment": 92173597647122334356293
+    },
+    {
+      "n": 72,
+      "bound": 1296,
+      "degree": 1296,
+      "alternating_sum": 3148244321913096809130,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -139,
+      "alternating_first_moment": 186970732229172249386625
+    },
+    {
+      "n": 73,
+      "bound": 1369,
+      "degree": 1369,
+      "alternating_sum": 6296488643826193618262,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -141,
+      "alternating_first_moment": 379188538328199660122041
+    },
+    {
+      "n": 74,
+      "bound": 1369,
+      "degree": 1369,
+      "alternating_sum": 12592977287652387236522,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -143,
+      "alternating_first_moment": 768871224396109642940941
+    },
+    {
+      "n": 75,
+      "bound": 1444,
+      "degree": 1444,
+      "alternating_sum": 25185954575304774473046,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -145,
+      "alternating_first_moment": 1558730744271639931276333
+    },
+    {
+      "n": 76,
+      "bound": 1444,
+      "degree": 1444,
+      "alternating_sum": 50371909150609548946090,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -147,
+      "alternating_first_moment": 3159438079502121153340825
+    },
+    {
+      "n": 77,
+      "bound": 1521,
+      "degree": 1521,
+      "alternating_sum": 100743818301219097892182,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -149,
+      "alternating_first_moment": 6402829340921924888258721
+    },
+    {
+      "n": 78,
+      "bound": 1521,
+      "degree": 1521,
+      "alternating_sum": 201487636602438195784362,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -151,
+      "alternating_first_moment": 12973565045679214939670821
+    },
+    {
+      "n": 79,
+      "bound": 1600,
+      "degree": 1600,
+      "alternating_sum": 402975273204876391568726,
+      "row_sum": 0,
+      "first_moment": 1,
+      "second_moment": -153,
+      "alternating_first_moment": 26282942819029160205649173
+    }
+  ],
+  "comment_formula_checks": {
+    "C.1": 79,
+    "C.2": 79,
+    "C.3": 78,
+    "C.4": 77,
+    "C.5": 76,
+    "C.6": 40,
+    "C.7": 39,
+    "C.8": 39,
+    "C.9": 38,
+    "C.10": 21,
+    "C.11": 75
+  },
+  "prime_zero_checks": {
+    "count": 990,
+    "row_range": [
+      1,
+      79
+    ],
+    "prime_range_per_row": "n < q <= 2n+17"
+  },
+  "first_zero_observations": {
+    "row_range": [
+      5,
+      79
+    ],
+    "universal_statement": "open in this note",
+    "rows": [
+      {
+        "n": 5,
+        "first_zero": 7,
+        "next_prime": 7
+      },
+      {
+        "n": 6,
+        "first_zero": 7,
+        "next_prime": 7
+      },
+      {
+        "n": 7,
+        "first_zero": 11,
+        "next_prime": 11
+      },
+      {
+        "n": 8,
+        "first_zero": 11,
+        "next_prime": 11
+      },
+      {
+        "n": 9,
+        "first_zero": 11,
+        "next_prime": 11
+      },
+      {
+        "n": 10,
+        "first_zero": 11,
+        "next_prime": 11
+      },
+      {
+        "n": 11,
+        "first_zero": 13,
+        "next_prime": 13
+      },
+      {
+        "n": 12,
+        "first_zero": 13,
+        "next_prime": 13
+      },
+      {
+        "n": 13,
+        "first_zero": 17,
+        "next_prime": 17
+      },
+      {
+        "n": 14,
+        "first_zero": 17,
+        "next_prime": 17
+      },
+      {
+        "n": 15,
+        "first_zero": 17,
+        "next_prime": 17
+      },
+      {
+        "n": 16,
+        "first_zero": 17,
+        "next_prime": 17
+      },
+      {
+        "n": 17,
+        "first_zero": 19,
+        "next_prime": 19
+      },
+      {
+        "n": 18,
+        "first_zero": 19,
+        "next_prime": 19
+      },
+      {
+        "n": 19,
+        "first_zero": 23,
+        "next_prime": 23
+      },
+      {
+        "n": 20,
+        "first_zero": 23,
+        "next_prime": 23
+      },
+      {
+        "n": 21,
+        "first_zero": 23,
+        "next_prime": 23
+      },
+      {
+        "n": 22,
+        "first_zero": 23,
+        "next_prime": 23
+      },
+      {
+        "n": 23,
+        "first_zero": 29,
+        "next_prime": 29
+      },
+      {
+        "n": 24,
+        "first_zero": 29,
+        "next_prime": 29
+      },
+      {
+        "n": 25,
+        "first_zero": 29,
+        "next_prime": 29
+      },
+      {
+        "n": 26,
+        "first_zero": 29,
+        "next_prime": 29
+      },
+      {
+        "n": 27,
+        "first_zero": 29,
+        "next_prime": 29
+      },
+      {
+        "n": 28,
+        "first_zero": 29,
+        "next_prime": 29
+      },
+      {
+        "n": 29,
+        "first_zero": 31,
+        "next_prime": 31
+      },
+      {
+        "n": 30,
+        "first_zero": 31,
+        "next_prime": 31
+      },
+      {
+        "n": 31,
+        "first_zero": 37,
+        "next_prime": 37
+      },
+      {
+        "n": 32,
+        "first_zero": 37,
+        "next_prime": 37
+      },
+      {
+        "n": 33,
+        "first_zero": 37,
+        "next_prime": 37
+      },
+      {
+        "n": 34,
+        "first_zero": 37,
+        "next_prime": 37
+      },
+      {
+        "n": 35,
+        "first_zero": 37,
+        "next_prime": 37
+      },
+      {
+        "n": 36,
+        "first_zero": 37,
+        "next_prime": 37
+      },
+      {
+        "n": 37,
+        "first_zero": 41,
+        "next_prime": 41
+      },
+      {
+        "n": 38,
+        "first_zero": 41,
+        "next_prime": 41
+      },
+      {
+        "n": 39,
+        "first_zero": 41,
+        "next_prime": 41
+      },
+      {
+        "n": 40,
+        "first_zero": 41,
+        "next_prime": 41
+      },
+      {
+        "n": 41,
+        "first_zero": 43,
+        "next_prime": 43
+      },
+      {
+        "n": 42,
+        "first_zero": 43,
+        "next_prime": 43
+      },
+      {
+        "n": 43,
+        "first_zero": 47,
+        "next_prime": 47
+      },
+      {
+        "n": 44,
+        "first_zero": 47,
+        "next_prime": 47
+      },
+      {
+        "n": 45,
+        "first_zero": 47,
+        "next_prime": 47
+      },
+      {
+        "n": 46,
+        "first_zero": 47,
+        "next_prime": 47
+      },
+      {
+        "n": 47,
+        "first_zero": 53,
+        "next_prime": 53
+      },
+      {
+        "n": 48,
+        "first_zero": 53,
+        "next_prime": 53
+      },
+      {
+        "n": 49,
+        "first_zero": 53,
+        "next_prime": 53
+      },
+      {
+        "n": 50,
+        "first_zero": 53,
+        "next_prime": 53
+      },
+      {
+        "n": 51,
+        "first_zero": 53,
+        "next_prime": 53
+      },
+      {
+        "n": 52,
+        "first_zero": 53,
+        "next_prime": 53
+      },
+      {
+        "n": 53,
+        "first_zero": 59,
+        "next_prime": 59
+      },
+      {
+        "n": 54,
+        "first_zero": 59,
+        "next_prime": 59
+      },
+      {
+        "n": 55,
+        "first_zero": 59,
+        "next_prime": 59
+      },
+      {
+        "n": 56,
+        "first_zero": 59,
+        "next_prime": 59
+      },
+      {
+        "n": 57,
+        "first_zero": 59,
+        "next_prime": 59
+      },
+      {
+        "n": 58,
+        "first_zero": 59,
+        "next_prime": 59
+      },
+      {
+        "n": 59,
+        "first_zero": 61,
+        "next_prime": 61
+      },
+      {
+        "n": 60,
+        "first_zero": 61,
+        "next_prime": 61
+      },
+      {
+        "n": 61,
+        "first_zero": 67,
+        "next_prime": 67
+      },
+      {
+        "n": 62,
+        "first_zero": 67,
+        "next_prime": 67
+      },
+      {
+        "n": 63,
+        "first_zero": 67,
+        "next_prime": 67
+      },
+      {
+        "n": 64,
+        "first_zero": 67,
+        "next_prime": 67
+      },
+      {
+        "n": 65,
+        "first_zero": 67,
+        "next_prime": 67
+      },
+      {
+        "n": 66,
+        "first_zero": 67,
+        "next_prime": 67
+      },
+      {
+        "n": 67,
+        "first_zero": 71,
+        "next_prime": 71
+      },
+      {
+        "n": 68,
+        "first_zero": 71,
+        "next_prime": 71
+      },
+      {
+        "n": 69,
+        "first_zero": 71,
+        "next_prime": 71
+      },
+      {
+        "n": 70,
+        "first_zero": 71,
+        "next_prime": 71
+      },
+      {
+        "n": 71,
+        "first_zero": 73,
+        "next_prime": 73
+      },
+      {
+        "n": 72,
+        "first_zero": 73,
+        "next_prime": 73
+      },
+      {
+        "n": 73,
+        "first_zero": 79,
+        "next_prime": 79
+      },
+      {
+        "n": 74,
+        "first_zero": 79,
+        "next_prime": 79
+      },
+      {
+        "n": 75,
+        "first_zero": 79,
+        "next_prime": 79
+      },
+      {
+        "n": 76,
+        "first_zero": 79,
+        "next_prime": 79
+      },
+      {
+        "n": 77,
+        "first_zero": 79,
+        "next_prime": 79
+      },
+      {
+        "n": 78,
+        "first_zero": 79,
+        "next_prime": 79
+      },
+      {
+        "n": 79,
+        "first_zero": 83,
+        "next_prime": 83
+      }
+    ]
+  },
+  "script_sha256": "f357e1634b4f6db4efd883914ce87f1370e3597b11f3f783cbbd42f8fb204199",
+  "scope_limit": "Finite checks supplement the written proofs. The first-zero observations cover rows 5 through 79; prime-index vanishing has a universal written proof."
+}

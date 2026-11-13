@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "source": "https://oeis.org/A391810",
+  "source_revision": 39,
+  "items": [
+    {
+      "locator": "COMMENTS (C.1)",
+      "source_quote": "T(n,0) = -1 for n >= 1.",
+      "status": "proved",
+      "proof": "Corollaries 1 and 2",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "COMMENTS (C.2)",
+      "source_quote": "T(n,1) = 1 for n >= 1.",
+      "status": "proved",
+      "proof": "Corollary 2",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "COMMENTS (C.3)",
+      "source_quote": "T(n,2) = -(n-2) for n >= 2.",
+      "status": "proved",
+      "proof": "Corollary 2",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "COMMENTS (C.4)",
+      "source_quote": "T(n,3) = n*(n-3)/2 + 2 for n >= 3.",
+      "status": "proved",
+      "proof": "Corollary 2",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "COMMENTS (C.5)",
+      "source_quote": "T(n,4) = -(n-3)*(n^2 - 3*n + 8)/6 for n >= 4.",
+      "status": "proved",
+      "proof": "Corollary 2",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "COMMENTS (C.6)",
+      "source_quote": "T(2*n-1, n^2) = (-1)^(n-1) for n >= 1.",
+      "status": "proved",
+      "proof": "Corollary 3",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "COMMENTS (C.7)",
+      "source_quote": "T(2*n-1, n^2-1) = (-1)^n*2 for n >= 2.",
+      "status": "proved",
+      "proof": "Corollary 3",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "COMMENTS (C.8)",
+      "source_quote": "T(2*n, n^2) = (-1)^(n-1)*n for n >= 1.",
+      "status": "proved",
+      "proof": "Corollary 3",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "COMMENTS (C.9)",
+      "source_quote": "T(2*n, n^2-1) = (-1)^n*2*n for n >= 2.",
+      "status": "proved",
+      "proof": "Corollary 3",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "COMMENTS (C.10)",
+      "source_quote": "T(p,p) = 2 for odd prime p.",
+      "status": "proved",
+      "proof": "Corollary 4",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "COMMENTS (C.11), zero clause",
+      "source_quote": "T(n, prime(pi(n)+1)) = 0 for n >= 5",
+      "status": "proved",
+      "proof": "Corollary 4",
+      "statement": "T(n,q)=0 for every n>=1 and prime q>n",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "COMMENTS (C.11), first-zero clause",
+      "source_quote": "the first zero in row n, T(n,k) = 0, appears to occur at k equal to the next prime after n for n >= 5. Thus, T(5,7) = 0, T(6,7) = 0, T(7,11) = 0, T(8,11) = 0, T(11,13) = 0, T(13,17) = 0, etc.",
+      "status": "open in this note",
+      "evidence": "Finite checks for rows 5 through 79",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "FORMULA (1)",
+      "source_quote": "Sum_{k=0..floor((n+1)/2)^2} T(n,k) * x^(-k) equals the power series expansion of Sum_{k=-oo..oo} x^k * (1 - x^k)^(n+k) after being truncated to include only nonpositive powers of x, for n >= 1 (by definition).",
+      "status": "definition with support proved",
+      "proof": "Definition (1) and Lemma 1",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "FORMULA (2)",
+      "source_quote": "Sum_{k=0..floor((n+1)/2)^2} T(n,k) = 0 for n >= 1 (conjecture).",
+      "status": "proved",
+      "proof": "Corollary 5",
+      "registered_problem_id": "oeis-a391810-full-laurent-row-sums"
+    },
+    {
+      "locator": "FORMULA (3)",
+      "source_quote": "Sum_{k=0..floor((n+1)/2)^2} k * T(n,k) = 1 for n >= 1 (conjecture).",
+      "status": "proved",
+      "proof": "Corollary 5",
+      "registered_problem_id": "oeis-a391810-laurent-first-moment"
+    },
+    {
+      "locator": "FORMULA (4)",
+      "source_quote": "Sum_{k=0..floor((n+1)/2)^2} k^2 * T(n,k) = -(2*n-5) for n >= 2 (conjecture).",
+      "status": "proved",
+      "proof": "Corollary 5",
+      "registered_problem_id": "oeis-a391810-second-moment"
+    },
+    {
+      "locator": "FORMULA (5)",
+      "source_quote": "Sum_{k=0..floor((n+1)/2)^2} -(-1)^k * T(n,k) = 2*round(2^n/3) = 2*A001045(n) for n >= 1 (conjecture), where A001045 is the Jacobsthal numbers (g.f. x/((1+x)*(1-2*x))).",
+      "status": "proved",
+      "proof": "Theorem 1",
+      "registered_problem_id": "oeis-a391810-alternating-jacobsthal"
+    },
+    {
+      "locator": "FORMULA (6)",
+      "source_quote": "Sum_{k=0..floor((n+1)/2)^2} -(-1)^k * k * T(n,k), n >= 1, forms a sequence with g.f. x*(1-x+8*x^2)/((1+x)^2*(1-2*x)^2) (conjecture), and begins [1, 1, 13, 25, 81, 181, 453, 1025, ...].",
+      "status": "proved",
+      "proof": "Corollary 6",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "FORMULA (7)",
+      "source_quote": "Sum_{k=0..floor((n+1)/2)^2} T(n,k)^2 = 2*A391811(n) for n >= 1.",
+      "status": "defining relation with positive integrality proved",
+      "proof": "Squared-norm paragraph after Corollary 6",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "COMMENTS, related bilateral identity",
+      "source_quote": "Related identity: Sum_{n=-oo..+oo} x^n * (1 - x^n)^n = 0.",
+      "status": "outside the nonpositive-coefficient scope",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "COMMENTS, related bilateral identity",
+      "source_quote": "Related identity: Sum_{k=-oo..+oo} x^k * (1 - x^k)^(n+k) = Sum_{k=-oo..oo, k<>0} (-1)^(k-n) * x^(k*(k-n-1)) / (1 - x^k)^(k-n) for n >= 0.",
+      "status": "outside the nonpositive-coefficient scope",
+      "registered_problem_id": null
+    },
+    {
+      "locator": "COMMENTS, row sum",
+      "source_quote": "Each row sum appears to equal zero.",
+      "status": "proved; same as FORMULA (2)",
+      "proof": "Corollary 5",
+      "registered_problem_id": "oeis-a391810-full-laurent-row-sums"
+    },
+    {
+      "locator": "A391811 COMMENTS, row sum",
+      "source_quote": "The row sums of A391810 appear to equal zero for rows n >= 1.",
+      "status": "proved; same as A391810 FORMULA (2)",
+      "proof": "Corollary 5",
+      "registered_problem_id": "oeis-a391810-full-laurent-row-sums"
+    }
+  ],
+  "lean_declarations": [
+    {
+      "module": "HannaLaurentAlternatingJacobsthal.lean",
+      "declaration": "full_formula_five",
+      "statement": "A391810 FORMULA (5), rounding-Jacobsthal equality, original-Laurent coefficient bridge, and support",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/1239bd2a0ed6e9d54aabb5a42af94234e9eb61ae/D5/S3/ArithSums/HannaLaurentAlternatingJacobsthal.lean"
+    },
+    {
+      "module": "HannaLaurentRowSums.lean",
+      "declarations": [
+        "series_coefficient",
+        "row_degree",
+        "result"
+      ],
+      "statement": "Coefficient bridge, support, and FORMULA (2)",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/1239bd2a0ed6e9d54aabb5a42af94234e9eb61ae/D5/S3/ArithSums/HannaLaurentRowSums.lean"
+    },
+    {
+      "module": "HannaLaurentFirstMoment.lean",
+      "declaration": "result",
+      "statement": "FORMULA (3)",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/1239bd2a0ed6e9d54aabb5a42af94234e9eb61ae/D5/S3/ArithSums/HannaLaurentFirstMoment.lean"
+    },
+    {
+      "module": "HannaLaurentSecondMoment.lean",
+      "declaration": "result",
+      "statement": "FORMULA (4)",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/1239bd2a0ed6e9d54aabb5a42af94234e9eb61ae/D5/S3/ArithSums/HannaLaurentSecondMoment.lean"
+    }
+  ],
+  "written_proofs": [
+    "Divisor formula",
+    "COMMENTS (C.1)--(C.10)",
+    "Prime-index vanishing",
+    "FORMULA (6)",
+    "Positive integrality of the half-squared norm"
+  ],
+  "finite_checks": "See verification.json for exact ranges"
+}

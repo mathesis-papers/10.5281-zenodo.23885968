@@ -1,0 +1,62 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 85628,
+      "matches_public": null,
+      "path": "paper.pdf",
+      "public_sha256": null,
+      "sha256": "1d955b6c585d70d30ee880a6ebf447c5dba8446708a8fa2c198969881ddef8e6"
+    },
+    "source": {
+      "bytes": 62921,
+      "matches_public": null,
+      "path": "manuscript/",
+      "public_sha256": null,
+      "sha256": "13c6d95622b8342b1e2e9746c205c0474ee36017695bb33402b481f0c8362726"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "We prove formula (5), COMMENTS (C.1)--(C.10), and the zero clause of COMMENT (C.11) of Paul D. Hanna's OEIS entry A391810, revision 39. For n>=1, the original bilateral Laurent coefficients form a finite row polynomial P_n(y)=-1+sum(h=1..n)y^h(1-y^h)^(n-h). Evaluating it at -1 gives the negative alternating row sum 2 round(2^n/3)=2J_n. The same polynomial proves formulas (2), (3), (4), and (6). Its divisor-sum coefficient expression proves the ten individual-term formulas and T(n,q)=0 for every prime q>n. The further first-zero assertion of (C.11) remains open in this note.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": "10.5281/zenodo.23885968",
+    "current_version": 4,
+    "doi": "10.5281/zenodo.23885969",
+    "lean_source": {
+      "revision": "1239bd2a0ed6e9d54aabb5a42af94234e9eb61ae",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/1239bd2a0ed6e9d54aabb5a42af94234e9eb61ae/D5/S3/ArithSums/HannaLaurentAlternatingJacobsthal.lean#L103"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "url": "/api/v1/collected-papers/oeis-a391810-alternating-jacobsthal/files/pdf?version=4"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-05T08:03:27.731753254Z",
+    "record": "oeis-a391810-alternating-jacobsthal",
+    "repository_name": "6aec384f18e9d5f3e99cfcd1",
+    "source": {
+      "url": "/api/v1/collected-papers/oeis-a391810-alternating-jacobsthal/files/source?version=4"
+    },
+    "title": "OEIS A391810: formula (5), COMMENTS (C.1)--(C.10), and prime-index vanishing",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-05T08:03:27.731753254Z",
+        "revision": "4",
+        "version": 4
+      }
+    ],
+    "work": "oeis-a391810-alternating-jacobsthal"
+  }
+}

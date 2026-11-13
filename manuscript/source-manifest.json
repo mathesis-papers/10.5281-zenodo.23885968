@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "members": [
+    {
+      "path": "README.md",
+      "bytes": 4234,
+      "sha256": "d63f930db37909c1b83ad7788b3c60cb5facea38591bf929aa26171fd06d3c6d"
+    },
+    {
+      "path": "metadata.json",
+      "bytes": 1715,
+      "sha256": "885d2e27111d441877738ebdd1861d466e7ebf45e663cf463edd3d342fc5126e"
+    },
+    {
+      "path": "note.tex",
+      "bytes": 17715,
+      "sha256": "dcd8d8ba15deb27922421f185bc43e55fe6d1973000a309b497377bb6c64d944"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 10537,
+      "sha256": "f357e1634b4f6db4efd883914ce87f1370e3597b11f3f783cbbd42f8fb204199"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 26835,
+      "sha256": "71cfb362158bd735a9ad4e186308fda921e4ffdaf4dc3a9a3fb0c9a1b71d95e8"
+    },
+    {
+      "path": "coverage.json",
+      "bytes": 7752,
+      "sha256": "71a0ae0786de106922762eee04586132eb838f3c4780c1174206277f162950e2"
+    },
+    {
+      "path": "sources/A001045.seq",
+      "bytes": 66342,
+      "sha256": "980060586ee34bc89f0e7444460104d14682c4b905ea622ca7978ee876d01427"
+    },
+    {
+      "path": "sources/A391810.seq",
+      "bytes": 7265,
+      "sha256": "49bbf5e8e42f91b6a3d838b2ce5c311eca58af74a83a4f6f684b09e1ddf0da83"
+    },
+    {
+      "path": "sources/A391811.seq",
+      "bytes": 1272,
+      "sha256": "66d1673784c2d2809c3af54788a6be4d9c3c9ff6126d0baddc31ea830a78ce21"
+    },
+    {
+      "path": "sources/HannaLaurentAlternatingJacobsthal.lean",
+      "bytes": 5444,
+      "sha256": "b0c746b57c9b62a0bcd5ae1891218c3b8aa0eaf216ba398d25fc5cbdaa497e9b"
+    },
+    {
+      "path": "sources/HannaLaurentFirstMoment.lean",
+      "bytes": 2713,
+      "sha256": "edb0b75a8cb40d78bef989f2d792f511db4fbfeb3d7ceae905c51fd9b961ee78"
+    },
+    {
+      "path": "sources/HannaLaurentRowSums.lean",
+      "bytes": 17171,
+      "sha256": "782a55aa6dafdab9902f5586fc1414bb9831d4580c48abfb2dc5d99c00b96b73"
+    },
+    {
+      "path": "sources/HannaLaurentSecondMoment.lean",
+      "bytes": 7259,
+      "sha256": "ab47f10553c5eecba1754b6e290693e2c9e880b806f5a8b227309b1fdbc596fe"
+    },
+    {
+      "path": "sources/UPSTREAM-LICENSE",
+      "bytes": 11349,
+      "sha256": "45404ee75576b053a86e89e545fd6987a607107cf4d846fa78dcb6a233d53447"
+    },
+    {
+      "path": "sources/lake-manifest.json",
+      "bytes": 3215,
+      "sha256": "8550e44937f85a9be196a2917a075eeb8c22bf6c15baa83e72017c6fc4437a8e"
+    },
+    {
+      "path": "sources/lean-toolchain",
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+    }
+  ]
+}

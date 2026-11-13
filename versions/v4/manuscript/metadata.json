@@ -1,0 +1,20 @@
+{
+  "id": "oeis-a391810-alternating-jacobsthal",
+  "revision": 4,
+  "problem_ids": [
+    "oeis-a391810-alternating-jacobsthal",
+    "oeis-a391810-full-laurent-row-sums",
+    "oeis-a391810-laurent-first-moment",
+    "oeis-a391810-second-moment"
+  ],
+  "topic": "OEIS A391810, formulas (2)--(6), COMMENTS (C.1)--(C.10), and the prime-zero clause of (C.11)",
+  "title": "OEIS A391810: formula (5), COMMENTS (C.1)--(C.10), and prime-index vanishing",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "We prove formula (5), COMMENTS (C.1)--(C.10), and the zero clause of COMMENT (C.11) of Paul D. Hanna's OEIS entry A391810, revision 39. For n>=1, the original bilateral Laurent coefficients form a finite row polynomial P_n(y)=-1+sum(h=1..n)y^h(1-y^h)^(n-h). Evaluating it at -1 gives the negative alternating row sum 2 round(2^n/3)=2J_n. The same polynomial proves formulas (2), (3), (4), and (6). Its divisor-sum coefficient expression proves the ten individual-term formulas and T(n,q)=0 for every prime q>n. The further first-zero assertion of (C.11) remains open in this note.",
+  "summary": "Complete written proofs of A391810 formulas (2)--(6), COMMENTS (C.1)--(C.10), and prime-index vanishing, with a divisor formula, exact source-item coverage, and finite checks through row 79. The first-zero assertion in (C.11) remains open here.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/1239bd2a0ed6e9d54aabb5a42af94234e9eb61ae/D5/S3/ArithSums/HannaLaurentAlternatingJacobsthal.lean#L103"
+}
