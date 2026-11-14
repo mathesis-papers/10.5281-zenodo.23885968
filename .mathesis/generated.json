@@ -51,8 +51,8 @@
     "manuscript/sources/lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
     "manuscript/verification.json": "71cfb362158bd735a9ad4e186308fda921e4ffdaf4dc3a9a3fb0c9a1b71d95e8",
     "manuscript/verify.py": "f357e1634b4f6db4efd883914ce87f1370e3597b11f3f783cbbd42f8fb204199",
-    "paper.json": "92d6cd7b5e6502caba9fd71a375fed8b64a57dd01e56d907b44eaf3048eff0d4",
+    "paper.json": "65224309991c100aa5f2cb236b786295d9339dd6183cb62e4bc055fcf07d05fc",
     "paper.pdf": "1d955b6c585d70d30ee880a6ebf447c5dba8446708a8fa2c198969881ddef8e6"
   },
-  "snapshot_identity": "dd071d9c64f77387049bc30d3f38f76669f327c11580747056819fe594a75620"
+  "snapshot_identity": "6769145a449927d848468ac7bcb4b79dd3d32d998c12eceb6c4c00e8ab4879b9"
 }
