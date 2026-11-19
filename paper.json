@@ -2,16 +2,16 @@
   "files": {
     "pdf": {
       "bytes": 85628,
-      "matches_public": null,
+      "matches_public": true,
       "path": "paper.pdf",
-      "public_sha256": null,
+      "public_sha256": "1d955b6c585d70d30ee880a6ebf447c5dba8446708a8fa2c198969881ddef8e6",
       "sha256": "1d955b6c585d70d30ee880a6ebf447c5dba8446708a8fa2c198969881ddef8e6"
     },
     "source": {
       "bytes": 62921,
-      "matches_public": null,
+      "matches_public": true,
       "path": "source.archive",
-      "public_sha256": null,
+      "public_sha256": "13c6d95622b8342b1e2e9746c205c0474ee36017695bb33402b481f0c8362726",
       "sha256": "13c6d95622b8342b1e2e9746c205c0474ee36017695bb33402b481f0c8362726"
     }
   },
@@ -38,6 +38,8 @@
     "license": "CC-BY-4.0",
     "msc": [],
     "pdf": {
+      "bytes": 85628,
+      "sha256": "1d955b6c585d70d30ee880a6ebf447c5dba8446708a8fa2c198969881ddef8e6",
       "url": "/api/v1/collected-papers/oeis-a391810-alternating-jacobsthal/files/pdf?version=4"
     },
     "previous_version": null,
@@ -46,6 +48,8 @@
     "record": "oeis-a391810-alternating-jacobsthal",
     "repository_name": "10.5281-zenodo.23885968",
     "source": {
+      "bytes": 62921,
+      "sha256": "13c6d95622b8342b1e2e9746c205c0474ee36017695bb33402b481f0c8362726",
       "url": "/api/v1/collected-papers/oeis-a391810-alternating-jacobsthal/files/source?version=4"
     },
     "title": "OEIS A391810: formula (5), COMMENTS (C.1)--(C.10), and prime-index vanishing",

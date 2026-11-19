@@ -1,7 +1,7 @@
 {
   "git_blobs": {
     ".github/workflows/pages.yml": "7879724db1358178aad7e9bed326a44be44f5a6a",
-    ".mathesis/generated.json": "9b9513e1ef4a1b423607bea0e0e36b84e12da7bf",
+    ".mathesis/generated.json": "3f731888554d66e042bee2d29343065ed7180988",
     "CHANGELOG.md": "4efbfde5c863614fd066a68b1e7f57c5546e11e5",
     "CITATION.cff": "3842e9f1018cdd27a93ce4e891e9e0e5091f581b",
     "CONTRIBUTING.md": "ea69168fc2cb506b57b00de1ef588aaf011aa3da",
@@ -25,7 +25,7 @@
     "manuscript/sources/lean-toolchain": "a6aff065db2882c535684f8c5bcd4f16e9a23915",
     "manuscript/verification.json": "b3999b34375d02dd8d47ce3d2869c4a18f246ec5",
     "manuscript/verify.py": "8a8d42f7a3cb36101b61bd81af0a90c844202b69",
-    "paper.json": "a1a4920b9b3e2904e589e21093420e2cd5d42d50",
+    "paper.json": "6efb4bc1ce30fb82bb356ebea08cbfd1de67330f",
     "paper.pdf": "d1faff4ec0540a90267c974097b7c774c25e9b4b",
     "site/en/index.html": "e40bfd22a61c994d38a49f7fbc1627953c7a1a40",
     "site/index.html": "378f4239bde9f47a568c1678d8d887830bac48ea",
@@ -63,7 +63,7 @@
   "schema": "mathesis.paper-collection.v1",
   "sha256": {
     ".github/workflows/pages.yml": "f15d983dcb8f324ffdedb50b05f7380e11fda8723d49b5c8f10ef0f414612372",
-    ".mathesis/generated.json": "f4f2c173f01c2daac849a3479c842fe8add4ef04fa2b7274656dd3f08f352788",
+    ".mathesis/generated.json": "9d5d5aa79dc2415f6480fa6f721c14c5b703cf1de4f47a0dcc19415544cc4eaa",
     "CHANGELOG.md": "2b4a09c77984fb0787a8fe23ccf26d92a1708b671f92acac51e2ad6e292c6203",
     "CITATION.cff": "a3289a68dc3bc7dfa7a9c8c86ddbc7d4eee472e5df4d9a0199fa8229417e5c85",
     "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
@@ -87,7 +87,7 @@
     "manuscript/sources/lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
     "manuscript/verification.json": "71cfb362158bd735a9ad4e186308fda921e4ffdaf4dc3a9a3fb0c9a1b71d95e8",
     "manuscript/verify.py": "f357e1634b4f6db4efd883914ce87f1370e3597b11f3f783cbbd42f8fb204199",
-    "paper.json": "472e60d83acb5bd0340ea8aad2bab9b1cc1167ad2399a4a9086b3ce463f059cf",
+    "paper.json": "b05762a48b815a07d8d811c0b88f8861e9aa846b671e3e7e22b37f1dda06b1a6",
     "paper.pdf": "1d955b6c585d70d30ee880a6ebf447c5dba8446708a8fa2c198969881ddef8e6",
     "site/en/index.html": "87f0ae38e10fcab6520d70632b8e56e5cefc2aaaafac788095c43eb37b7f5143",
     "site/index.html": "b93ad58bdbec25dc74cb0db940ca64cc74c58a33467698fcbb8947f3a5567e76",
